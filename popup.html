@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>OfferPilot</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<header class="hd">
+  <div class="logo">O</div>
+  <div class="hd-t">
+    <strong>OfferPilot</strong>
+    <span id="conn">正在连接当前页面…</span>
+  </div>
+  <span class="dot" id="dot"></span>
+</header>
+
+<main id="body">
+  <section class="card" id="pageCard">
+    <div class="page-host">
+      <span class="fav" id="fav">·</span>
+      <div class="page-t">
+        <strong id="host">—</strong>
+        <span id="title">—</span>
+      </div>
+    </div>
+
+    <div class="stat">
+      <b id="pct">0%</b>
+      <em id="cnt">识别 0 / 0 个字段</em>
+      <span class="sp" id="reqTag"></span>
+    </div>
+    <div class="meter"><i id="bar"></i></div>
+
+    <div class="row">
+      <button class="btn pri" id="fillEmpty">填充空白字段</button>
+      <button class="btn" id="fillAll">覆盖全部</button>
+    </div>
+    <div class="row sm">
+      <button class="btn" id="rescan">重新识别</button>
+      <button class="btn" id="undo">撤销填充</button>
+    </div>
+  </section>
+
+  <section id="warnBox"></section>
+
+  <section class="card list-card" id="listCard">
+    <div class="list-hd">识别明细<span id="listCnt"></span></div>
+    <div class="list" id="list"></div>
+  </section>
+
+  <div class="empty" id="emptyBox" hidden>
+    <strong>这个页面用不了智能填充</strong>
+    <p>浏览器不允许扩展访问设置页、扩展商店或空白页这类页面。请打开企业的招聘官网网申页面后再试。</p>
+  </div>
+</main>
+
+<footer class="ft">
+  <button class="btn ghost" id="openApp">打开工作台</button>
+  <button class="btn ghost" id="openHelp">完善档案</button>
+</footer>
+
+<script src="assets/js/bridge.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
